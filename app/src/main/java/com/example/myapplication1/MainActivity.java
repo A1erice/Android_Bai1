@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
+import androidx.core.content.ContextCompat;
 import androidx.core.view.WindowCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         setSupportActionBar(binding.toolbar);
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -65,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
         // Display a simple dialog with some text
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("About Us")
-                .setMessage("This app is created by 18th Group!")
+                .setMessage("This app is created by 18th Group! \n" +
+                        "Link of this project: \n" +
+                        "https://github.com/A1erice/Android_Bai1")
                 .setPositiveButton("OK", (dialog, which) -> {
                     // Handle OK button click if needed
                 })
