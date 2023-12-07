@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/box1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#19FF19"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/box2"
+            android:layout_width="240dp"
+            android:layout_height="180dp"
+            android:layout_below="@id/box1"
+            android:background="#FF2525"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/box3"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_below="@id/box1"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/box2"
+            android:background="#FFFF25"/>
+
+        <TextView
+            android:id="@+id/box4"
+            android:layout_width="240dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/box2"
+            android:layout_marginBottom="16dp"
+            android:background="#FF00FF" />
+
+        <TextView
+            android:id="@+id/box5"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_above="@+id/colorSeekBar"
+            android:layout_below="@id/box3"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/box4"
+            android:background="#00FFFF" />
+
+        <SeekBar
+            android:id="@+id/colorSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/box4"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:max="200"
+            android:progress="0" />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
